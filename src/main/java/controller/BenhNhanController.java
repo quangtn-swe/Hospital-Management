@@ -1,5 +1,5 @@
 package controller;
-
+//test squash
 import exception.ValidationException;
 import java.io.IOException;
 import java.time.LocalDate;
@@ -17,7 +17,11 @@ import model.dto.TaiKhoanDTO;
 import service.BenhNhanService;
 import service.PhieuKhamBenhService;
 import service.TaiKhoanService;
-
+//add
+//add2
+//add3
+//add4
+//test ammend
 /**
  * Controller xử lý các nghiệp vụ liên quan đến Bệnh Nhân (Patient). (ĐÃ NÂNG
  * CẤP: Thêm Tìm kiếm, Sửa lỗi Xóa Mềm, Sửa lỗi Ngày sinh, Thêm Mã dự kiến)

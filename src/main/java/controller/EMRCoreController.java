@@ -197,7 +197,7 @@ public class EMRCoreController extends HttpServlet {
         }
         return ENCOUNTER_LIST_PAGE;
     }
-
+//commit2
     /**
      * Lấy chi tiết một phiếu khám và hiển thị (chuyển hướng đến trang chi
      * tiết).

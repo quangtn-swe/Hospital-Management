@@ -56,7 +56,12 @@
                     <span class="nav-text">DS. Đơn Thuốc</span>
                 </a>
             </li>
-            
+            <li>
+                <a href="<c:url value='/MainController?action=listLichHenNurse'/>" class="nav-link" data-link="listLichHenNurse">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span class="nav-text">Lịch Hẹn</span>
+                </a>
+            </li>
             <li>
                 <a href="<c:url value='/MainController?action=listMedications'/>" class="nav-link" data-link="listMedications">
                     <i class="fas fa-pills"></i>

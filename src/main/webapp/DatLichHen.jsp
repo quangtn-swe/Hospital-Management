@@ -47,9 +47,9 @@
                 <div class="form-group">
                     <label for="bacSiId">Chọn Bác sĩ:</label>
                     <select name="bacSiId" id="bacSiId" required>
-                        <option value="">-- Please select a department first --</option>
+                        <option value="">-- Vui lòng chọn khoa trước --</option>
                     </select>
-                    <small id="bacSiLoading" style="color: #5d5dff; display: none;">loading...</small>
+                    <small id="bacSiLoading" style="color: #5d5dff; display: none;">Đang tải bác sĩ...</small>
                 </div>
 
                 <div class="form-group">

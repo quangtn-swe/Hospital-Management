@@ -21,7 +21,7 @@ import model.dto.TaiKhoanDTO;
  * Filter này kiểm soát việc xác thực (Authentication) và phân quyền
  * (Authorization) cho MainController.
  */
-//@WebFilter(filterName = "AuthFilter", urlPatterns = {"/MainController"})
+@WebFilter(filterName = "AuthFilter", urlPatterns = {"/MainController"})
 public class AuthFilter implements Filter {
 
     // --- Các Set (tập hợp) để chứa các action cho từng vai trò ---

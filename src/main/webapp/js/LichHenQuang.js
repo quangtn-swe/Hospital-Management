@@ -7,7 +7,7 @@ async function loadBacSi(selectElement) {
     bacSiSelect.innerHTML = ''; // Xóa option cũ
 
     if (!khoaId) {
-        bacSiSelect.innerHTML = '<option value="">-- Please select a department first --</option>';
+        bacSiSelect.innerHTML = '<option value="">-- Vui lòng chọn khoa trước --</option>';
         return;
     }
 
@@ -33,10 +33,10 @@ async function loadBacSi(selectElement) {
         }
 
         if (!Array.isArray(bacSiList) || bacSiList.length === 0) {
-            bacSiSelect.innerHTML = '<option value="">-- This department does not have a doctor. --</option>';
+            bacSiSelect.innerHTML = '<option value="">-- Khoa này không có bác sĩ --</option>';
         } else {
             // Hiển thị danh sách bác sĩ - SỬA Ở ĐÂY
-            bacSiSelect.innerHTML = '<option value="">-- Choose a doctor --</option>';
+            bacSiSelect.innerHTML = '<option value="">-- Chọn bác sĩ --</option>';
             bacSiList.forEach(bacSi => {
                 const option = document.createElement('option');
                 option.value = bacSi.id;

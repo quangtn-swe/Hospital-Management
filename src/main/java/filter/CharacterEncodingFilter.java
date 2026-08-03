@@ -13,7 +13,7 @@ import javax.servlet.annotation.WebFilter;
  * Filter này đảm bảo mọi request và response đều được xử lý bằng bộ mã UTF-8.
  * Nó giải quyết triệt để vấn đề lỗi font tiếng Việt.
  */
-//@WebFilter(filterName = "CharacterEncodingFilter", urlPatterns = {"/*"})
+@WebFilter(filterName = "CharacterEncodingFilter", urlPatterns = {"/*"})
 public class CharacterEncodingFilter implements Filter {
 
     @Override

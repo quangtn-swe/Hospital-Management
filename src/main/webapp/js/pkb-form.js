@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         async function fetchAppointments() {
             const selectedDate = appointmentDateInput.value;
             if (!selectedDate) {
-                lichHenSelect.innerHTML = '<option value="">-- Select Date --</option>';
+                lichHenSelect.innerHTML = '<option value="">-- Chọn ngày để lọc lịch hẹn --</option>';
                 return;
             }
 
@@ -34,11 +34,11 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             if (!bacSiId) {
-                lichHenSelect.innerHTML = '<option value="">-- Select Doctor First --</option>';
+                lichHenSelect.innerHTML = '<option value="">-- Vui lòng chọn bác sĩ trước --</option>';
                 return;
             }
 
-            lichHenSelect.innerHTML = '<option value="">-- Loading... --</option>';
+            lichHenSelect.innerHTML = '<option value="">-- Đang tải... --</option>';
 
             let url = `${APPOINTMENT_URL}${selectedDate}&bacSiId=${bacSiId}`;
 
@@ -49,9 +49,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 const appointments = await response.json();
 
-                lichHenSelect.innerHTML = '<option value="">-- Get Appointments By Date --</option>';
+                lichHenSelect.innerHTML = '<option value="">-- Chọn từ lịch hẹn --</option>';
                 if (appointments.length === 0) {
-                    lichHenSelect.innerHTML = '<option value="">-- Don have any Appointments in this date --</option>';
+                    lichHenSelect.innerHTML = '<option value="">-- Bác sĩ không có lịch hẹn ngày này --</option>';
                 }
 
                 appointments.forEach(app => {
@@ -144,13 +144,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         function displayPatientResults(patients) {
             if (!patients || patients.length === 0) {
-                searchResults.innerHTML = '<p class="no-patient-results">dont have any patients </p>';
+                searchResults.innerHTML = '<p class="no-patient-results">Không tìm thấy bệnh nhân nào.</p>';
                 return;
             }
 
             const table = document.createElement('table');
             table.className = 'patient-result-table';
-            table.innerHTML = `<thead><tr><th>Id</th><th>Name</th><th>CCCD</th></tr></thead>`;
+            table.innerHTML = `<thead><tr><th>Mã BN</th><th>Họ Tên</th><th>CCCD</th></tr></thead>`;
             const tbody = document.createElement('tbody');
 
             patients.forEach(p => {

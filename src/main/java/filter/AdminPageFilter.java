@@ -18,7 +18,7 @@ import model.dto.TaiKhoanDTO; // Đảm bảo import DTO của bạn
  * đăng nhập truy cập.
  */
 // QUAN TRỌNG: urlPatterns trỏ đến thư mục cần bảo vệ
-//@WebFilter(filterName = "AdminPageFilter", urlPatterns = {"/admin/*"})
+@WebFilter(filterName = "AdminPageFilter", urlPatterns = {"/admin/*"})
 public class AdminPageFilter implements Filter {
 
     @Override
